@@ -26,5 +26,5 @@ My solution!
    - $ apt-get update
    - $ apt-get upgrade
    - $ updatedb
-1. el dpkg y update-grup no le dí, porque mi problema inicial era que no me cargaba las extensiones en tweaks para poder habilitar y deshabilitar el dash to dock (huevada que se me dio), por ello volví a instalar tweaks.
+1. el dpkg y update-grup no le dí, porque mi problema inicial era que no me cargaba las extensiones en tweaks para poder habilitar y deshabilitar el dash to dock (huevada que se me dio), por ello volví a instalar tweaks, al reiniciar el sistema, no cargaba el sistema y se quedaba mostrando un mensaje: Started Update UTMP about System Runlevel Changes...
 Eso era un problema con el gnome, por eso solo necesitaba actualizar el sistema y no reconfigurar el entorno de variables del sistema ni el grub de booteo, si esto no funcionaba hubiera optado por la solución 1.
