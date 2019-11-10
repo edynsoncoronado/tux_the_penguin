@@ -26,4 +26,5 @@ My solution!
    - $ apt-get update
    - $ apt-get upgrade
    - $ updatedb
-1. el dpkg y update-grup no le dí, porque mi problema inicial era que no me cargaba las extensiones en tweaks para poder habilitar y deshabilitar el dash to dock (huevada que se me dio), y por ello volvì a instalar tweaks, por ello, seguro en un problema con el gnome, por eso solo necesitaba actualizar el sistema y reconfigurar el entorno de variables del sistema y el grub de booteo(si esto no funcionaba hubiera optado por la solución 1).
+1. el dpkg y update-grup no le dí, porque mi problema inicial era que no me cargaba las extensiones en tweaks para poder habilitar y deshabilitar el dash to dock (huevada que se me dio), por ello volví a instalar tweaks.
+Eso era un problema con el gnome, por eso solo necesitaba actualizar el sistema y no reconfigurar el entorno de variables del sistema ni el grub de booteo, si esto no funcionaba hubiera optado por la solución 1.
