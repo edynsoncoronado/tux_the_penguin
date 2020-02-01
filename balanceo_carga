@@ -1,0 +1,55 @@
+¿Qué es el Balanceo de carga?
+Distribuye las peticiones que se realicen a un servidor redireccionando hacia otros servidores.
+
+Beneficios:
+-Optimiza recursos
+-Máximiza el redimiento
+-Reduce la latencia
+
+Si se utiliza un balanceo de carga, también se va a tener que usar un proxi.
+
+¿Qué es un proxi?
+Hace de intermediario en las peticiones de recursos que realiza un cliente a otro servidor.
+
+En esta caso configuraremos el balanceo de carga con Nginx que servirá de proxi.
+
+
+servidor1:
+vim /etc/nginx/nginx.conf
+++include /etc/nginx/sites-enabled/default
+++include /etc/nginx/sites-enabled/server;
+
+/etc/nginx/sites-enabled/server
+server
+{
+	listen 80;
+	server_name 18.220.79.151;
+	root /var/www/nginx;
+	index index.html;
+	autoindex on;
+	location /
+	{
+		proxy_pass http://codestack;
+	}
+}
+upstream codestack
+{
+	server 18.216.77.221;
+	server 13.59.247.229;
+}
+
+servidor2: /etc/nginx/sites-enabled/default
+server {
+	listen 80;
+	server_name 18.216.77.221;
+	root /var/www/nginx;
+	index index.html;
+}
+
+servidor3: /etc/nginx/sites-enabled/default
+server {
+	listen 80;
+	server_name 13.59.247.229;
+	root /var/www/nginx;
+	index index.html;
+}
