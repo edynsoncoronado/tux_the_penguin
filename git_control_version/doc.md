@@ -1,30 +1,35 @@
 # CURSO GIT
 
-1. Flujo de trabajo básico
+## Flujo de trabajo básico
 ![CAT](https://raw.githubusercontent.com/edynsoncoronado/tux_the_penguin/master/src/images/gitflow.png)
+### Estado ------------ Area
+1. Untracked ---------> Directorio de trabajo
+1. Tracked -----------> Staging
+1. VersionadoLocal ---> Repositorio Local
+1. VersionadoGlobal --> Versionado Remoto
 
-1. Configuración
-1. Git reset vs Git rm
-1. Flujo de trabajo con repositorio remoto
-	*	Clonar repositorio
-	* 	Modificar url origin del repositorio
-	*	Agregar tag
-	*	Manejo de ramas
-	*	Agregar colaboradores al proyecto
-	*	Pull Requests
-	*	.gitignore
-	*	readme.md
-1.	Github.io 
-1.	Tricks
-	*	Rebase
-	*	Stash
-	* 	Git Clean
-	*	Git Cherry-pick
-	*	--amend
-	*	Git reset y reflog
-	*	Git grep
-	*	Git shortlog
-	*	Git blame
+## Configuración
+## Git reset vs Git rm
+## Flujo de trabajo con repositorio remoto
+1.	Clonar repositorio
+1.	Modificar url origin del repositorio
+1.	Agregar tag
+1.	Manejo de ramas
+1.	Agregar colaboradores al proyecto
+1.	Pull Requests
+1.	.gitignore
+1.	readme.md
+##	Github.io 
+##	Tricks
+1.	Rebase
+1.	Stash
+1.	Git Clean
+1.	Git Cherry-pick
+1.	--amend
+1.	Git reset y reflog
+1.	Git grep
+1.	Git shortlog
+1.	Git blame
 
 
 1) Al invocar el comando, "git branch -a" devolverá una lista con los nombres de todas las ramas conocidas.
