@@ -6,4 +6,4 @@
 * https://stackoverflow.com/a/35975994 [definition worker]
 * https://github.com/odoo/odoo/blob/52484b0132ee3e0063dd67cc3c2eb434f99f5db8/doc/setup/deploy.rst [deploy odoo]
 * https://es.slideshare.net/openobject/performance2014-35689113 [high performance odoo]
-
+* https://odooperu.org/?p=510
