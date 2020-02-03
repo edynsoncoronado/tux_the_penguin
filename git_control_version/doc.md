@@ -27,33 +27,36 @@ Este comando nos ayuda a eliminar archivos de Git sin eliminar su historial del 
     Elimina los archivos de Git y del disco duro. Git siempre guarda todo.
 1. **git reset**  
 Este comando nos ayuda a volver en el tiempo. Pero no como git checkout que nos deja ir, mirar, pasear y volver. Con git reset volvemos al pasado sin la posibilidad de volver al futuro. Borramos la historia. No hay vuelta atrás.
-    * **git reset HASH --hard**  
+    * **git reset HEAD --hard**  
     Borra todo. Todo todito, absolutamente todo. Toda la información de los commits y del área de staging se borra del historial.
-    * **git reset HASH --soft**  
+    * **git reset HEAD --soft**  
     Borramos todo el historial y los registros de Git pero guardamos los cambios que tengamos en Staging, así podemos aplicar las últimas actualizaciones a un nuevo commit.
 * **git reset HEAD**  
 Este es el comando para sacar archivos del área de Staging.
 
 ## Flujo de trabajo con repositorio remoto
+![CAT](https://raw.githubusercontent.com/edynsoncoronado/tux_the_penguin/master/src/images/gitfetch-gitmerge.png)
+* **git fetch + git merge = git pull**
+
 1.	**Clonar repositorio**
-1.	Modificar url origin del repositorio
-1.	Agregar tag
-1.	Manejo de ramas
-1.	Agregar colaboradores al proyecto
-1.	Pull Requests
-1.	.gitignore
-1.	readme.md
+1.	**Modificar url origin del repositorio**
+1.	**Agregar tag**
+1.	**Manejo de ramas**
+1.	**Agregar colaboradores al proyecto**
+1.	**Pull Requests**
+1.	**.gitignore**
+1.	**readme.md**
 ##	Github.io 
 ##	Tricks
-1.	Rebase
-1.	Stash
-1.	Git Clean
-1.	Git Cherry-pick
-1.	--amend
-1.	Git reset y reflog
-1.	Git grep
-1.	Git shortlog
-1.	Git blame
+1.	**Rebase**
+1.	**Stash**
+1.	**Git Clean**
+1.	**Git Cherry-pick**
+1.	**--amend**
+1.	**Git reset y reflog**
+1.	**Git grep**
+1.	**Git shortlog**
+1.	**Git blame**
 
 
 1) Al invocar el comando, "git branch -a" devolverá una lista con los nombres de todas las ramas conocidas.
