@@ -38,9 +38,28 @@ Este es el comando para sacar archivos del área de Staging.
 ![CAT](https://raw.githubusercontent.com/edynsoncoronado/tux_the_penguin/master/src/images/gitfetch-gitmerge.png)
 * **git fetch + git merge = git pull**
 
-1.	**Clonar repositorio**
-1.	**Modificar url origin del repositorio**
+1.	**Agregar origin del repositorio**
+    * git remote add origin *url-ssh-del-repositorio-en-github*
+    * git remote -v
+    * En caso suceda el siguiente error:  
+    **# fatal: refusing to merge unrelated histories ::para este caso utilizar el siguiente comando:**  
+        * git pull origin master --allow-unrelated-histories
+        * git push origin master
+    
+1.	**Modificar origin del repositorio**
+    * git remote set-url origin *url-ssh-del-repositorio-en-github*
 1.	**Agregar tag**
+    * git tag -a nombretag -m “mensaje” HEAD
+    * **listar tag**  
+    git tag
+    * **ver la relación de tags y head del historial**  
+    git show-ref --tags  
+    * **subir tags al repositorio remoto**  
+    git push origin --tags
+    * **eliminar tag en repositorio local**  
+    git tag -d nombre_tag
+    * **eliminar tag en repositorio remoto**  
+    git push origin :refs/tags/nombre_tag
 1.	**Manejo de ramas**
 1.	**Agregar colaboradores al proyecto**
 1.	**Pull Requests**
