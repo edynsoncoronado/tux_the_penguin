@@ -12,9 +12,30 @@
 ![CAT](https://raw.githubusercontent.com/edynsoncoronado/tux_the_penguin/master/src/images/gitflow2.png)
 
 ## Configuración
+* git config --list
+* git config --list --show-origin
+* git config --global user.name “Edynson Coronado”
+* git config --global user.email “edynsoncoronado@gmail.com”
+* git config --global core.editor EDITOR
+
 ## Git reset vs Git rm
+1. **git rm**  
+Este comando nos ayuda a eliminar archivos de Git sin eliminar su historial del sistema de versiones. Esto quiere decir que si necesitamos recuperar el archivo solo debemos “viajar en el tiempo” y recuperar el último commit antes de borrar el archivo en cuestión.
+    * **git rm --cached**  
+    Elimina los archivos del área de Staging y del próximo commit pero los mantiene en nuestro disco duro.
+    * **git rm --force**  
+    Elimina los archivos de Git y del disco duro. Git siempre guarda todo.
+1. **git reset**  
+Este comando nos ayuda a volver en el tiempo. Pero no como git checkout que nos deja ir, mirar, pasear y volver. Con git reset volvemos al pasado sin la posibilidad de volver al futuro. Borramos la historia. No hay vuelta atrás.
+    * **git reset HASH --hard**  
+    Borra todo. Todo todito, absolutamente todo. Toda la información de los commits y del área de staging se borra del historial.
+    * **git reset HASH --soft**  
+    Borramos todo el historial y los registros de Git pero guardamos los cambios que tengamos en Staging, así podemos aplicar las últimas actualizaciones a un nuevo commit.
+* **git reset HEAD**  
+Este es el comando para sacar archivos del área de Staging.
+
 ## Flujo de trabajo con repositorio remoto
-1.	Clonar repositorio
+1.	**Clonar repositorio**
 1.	Modificar url origin del repositorio
 1.	Agregar tag
 1.	Manejo de ramas
