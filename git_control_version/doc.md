@@ -61,7 +61,14 @@ Este es el comando para sacar archivos del área de Staging.
     * **eliminar tag en repositorio remoto**  
     git push origin :refs/tags/nombre_tag
 1.	**Manejo de ramas**
-1.	**Agregar colaboradores al proyecto**
+    * **mostrar ramas y sus commit**  
+    git show-branch
+    * **mostrar ramas y sus commits con más detalle**  
+    git show-branch --all
+    * **interfaz gráfica para manejo de ramas**  
+    gitk
+1.	**Agregar colaboradores al proyecto**  
+**Repositorio** > **Settings** > **Collaborators**; *y añadir el email o username de los nuevos colaboradores.*
 1.	**Pull Requests**
 1.	**.gitignore**
 1.	**readme.md**
