@@ -1,6 +1,8 @@
 # CURSO GIT
 
 1. Flujo de trabajo básico
+![CAT](https://raw.githubusercontent.com/edynsoncoronado/tux_the_penguin/master/src/images/gitflow.png)
+
 1. Configuración
 1. Git reset vs Git rm
 1. Flujo de trabajo con repositorio remoto
