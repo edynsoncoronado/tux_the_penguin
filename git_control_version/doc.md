@@ -2,11 +2,14 @@
 
 ## Flujo de trabajo básico
 ![CAT](https://raw.githubusercontent.com/edynsoncoronado/tux_the_penguin/master/src/images/gitflow.png)
-### Estado ------------ Area
+#### Estado ------------ Area
 1. Untracked ---------> Directorio de trabajo
 1. Tracked -----------> Staging
 1. VersionadoLocal ---> Repositorio Local
 1. VersionadoGlobal --> Versionado Remoto
+
+#### Branch y Merge
+![CAT](https://raw.githubusercontent.com/edynsoncoronado/tux_the_penguin/master/src/images/gitflow2.png)
 
 ## Configuración
 ## Git reset vs Git rm
