@@ -80,8 +80,32 @@ README.md es una excelente práctica en tus proyectos, md significa Markdown es 
 ##	Github.io 
 * **https://pages.github.com/**
 ##	Tricks
-1.	**Rebase**
+1.	**Rebase**  
+Con rebase puedes recoger todos los cambios confirmados en una rama y ponerlos sobre otra.  
+**master-----experiment**  
+-----ao-----------  
+-----bo-----------  
+-----co-----co----  
+-----|------ax----  
+-----|------bx----  
+-----do-----------  
+    * git checkout experiment
+    * git rebase master
+    * git checkout master
+    * git rebase experiment  
+**--master---**  
+-----ao-----  
+-----bo-----  
+-----co-----  
+-----do-----  
+-----ax-----  
+-----bx-----  
 1.	**Stash**
+    * git stash
+    * git stash list
+    * git stash pop
+    * git stash branch english-version
+    * git stash drop
 1.	**Git Clean**
 1.	**Git Cherry-pick**
 1.	**--amend**
