@@ -107,6 +107,8 @@ Con rebase puedes recoger todos los cambios confirmados en una rama y ponerlos s
     * git stash branch english-version
     * git stash drop
 1.	**Git Clean**
+    * Para saber qué archivos vamos a borrar tecleamos: **git clean --dry-run**
+    * Para borrar todos los archivos listados (que no son carpetas) tecleamos: **git clean -f**
 1.	**Git Cherry-pick**
 1.	**--amend**
 1.	**Git reset y reflog**
