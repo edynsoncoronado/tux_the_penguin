@@ -104,7 +104,7 @@ $ cdvirtualenv
 $ mkdir backups && cd backups
 $ pg_dump -U odoo -W --no-owner -h localhost demo > demo.sql
 $ cdvirtualenv
-$ jobs && cd jobs
+$ mkdir jobs && cd jobs
 $ vim backups_edy.sh
 ```
 #!/bin/bash
