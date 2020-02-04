@@ -70,9 +70,15 @@ Este es el comando para sacar archivos del área de Staging.
 1.	**Agregar colaboradores al proyecto**  
 **Repositorio** > **Settings** > **Collaborators**; *y añadir el email o username de los nuevos colaboradores.*
 1.	**Pull Requests**
-1.	**.gitignore**
-1.	**readme.md**
+    * git branch dev
+    * git commit -a
+    * **En github crear pull request dev -> master:** code review
+1.	**.gitignore**  
+No todos los archivos que agregas a un proyecto deberían ir a un repositorio, por ejemplo cuando tienes un archivo donde están tus contraseñas que comúnmente tienen la extensión .env o cuando te estás conectando a una base de datos; son archivos que nadie debe ver.
+1.	**readme.md**  
+README.md es una excelente práctica en tus proyectos, md significa Markdown es un especie de código que te permite cambiar la manera en que se ve un archivo de texto.
 ##	Github.io 
+* **https://pages.github.com/**
 ##	Tricks
 1.	**Rebase**
 1.	**Stash**
