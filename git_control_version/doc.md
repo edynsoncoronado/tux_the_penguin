@@ -110,7 +110,11 @@ Con rebase puedes recoger todos los cambios confirmados en una rama y ponerlos s
     * Para saber qué archivos vamos a borrar tecleamos: **git clean --dry-run**
     * Para borrar todos los archivos listados (que no son carpetas) tecleamos: **git clean -f**
 1.	**Git Cherry-pick**
+    * Existe un mundo alternativo en el cual vamos avanzando en una rama pero necesitamos en master uno de esos avances de la otra rama, para eso utilizamos el comando: **git cherry-pick HEAD**.
 1.	**--amend**
+    * A veces hacemos un commit, pero resulta que no queríamos mandarlo porque faltaba algo más. Utilizamos git commit --amend, *amend en inglés es remendar* y lo que hará es agregar al commit anterior los cambios que hicimos.
+        * git add file
+        * git commit --amend
 1.	**Git reset y reflog**
 1.	**Git grep**
 1.	**Git shortlog**
