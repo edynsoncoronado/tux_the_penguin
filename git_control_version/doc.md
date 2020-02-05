@@ -149,6 +149,10 @@ Comando para saber la historia completa del repositorio. No olvida, no perdona.
     * ver ramas remotas y locales  
     **git branch -a**
 
+![CAT](https://raw.githubusercontent.com/edynsoncoronado/tux_the_penguin/master/src/images/gitflow3.png)
+![CAT](https://raw.githubusercontent.com/edynsoncoronado/tux_the_penguin/master/src/images/devopspr.png)
+![CAT](https://raw.githubusercontent.com/edynsoncoronado/tux_the_penguin/master/src/images/gitapps.png)
+![CAT](https://raw.githubusercontent.com/edynsoncoronado/tux_the_penguin/master/src/images/automaticdevops.png)
 
 1) Al invocar el comando, "git branch -a" devolverá una lista con los nombres de todas las ramas conocidas.
 
