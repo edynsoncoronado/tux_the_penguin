@@ -115,9 +115,24 @@ Con rebase puedes recoger todos los cambios confirmados en una rama y ponerlos s
     * A veces hacemos un commit, pero resulta que no queríamos mandarlo porque faltaba algo más. Utilizamos git commit --amend, *amend en inglés es remendar* y lo que hará es agregar al commit anterior los cambios que hicimos.
         * git add file
         * git commit --amend
-1.	**Git reset y reflog**
+1.	**git reflog**  
+Comando para saber la historia completa del repositorio. No olvida, no perdona.
 1.	**Git grep**
+    * Con **git grep -n <string>** nos saldrá un output el cual nos dirá en qué línea está lo que estamos buscando.
+    * Con **git grep -c <string>** nos saldrá un output el cual nos dirá cuántas veces se repite esa palabra y en qué archivo.
+    * **git log -S <string>**, este retorna los commit en que el texto aparece entre los cambios, no necesariamente en el mensaje de commit.
 1.	**Git shortlog**
+    * Commits realizados por persona  
+    **git shortlog**
+    * Contador de commits realizados por persona  
+    **git shortlog -sn**
+    * Contador de todos los commits (incluido los borrados del historial) realizados por persona  
+    **git shortlog -sn --all**
+    * Contados de commits, no incluidos los merge  
+    **git shortlog -sn --all --no-merges**
+    * creación de alias en git  
+    **git config --global alias.*contador* "shortlog -sn --all --no-merges"**  
+    **git *contador* **
 1.	**Git blame**
 
 
