@@ -132,8 +132,22 @@ Comando para saber la historia completa del repositorio. No olvida, no perdona.
     **git shortlog -sn --all --no-merges**
     * creación de alias en git  
     **git config --global alias.*contador* "shortlog -sn --all --no-merges"**  
-    **git *contador* **
+    **git *contador***
 1.	**Git blame**
+    * revisar quien hizo los cambios en cada lìnes de un archivo.  
+    **git blame *file***
+    * el parámetro -c muestra el archivo con las tabulaciones del archivo.  
+    **git blame -c *file***
+    * ver documentación  
+    **git blame --help**
+    * visualizar de tal lìnea a tal lìnea  
+    **git blame *file* -L30,50**
+    * visualizar de tal lìnea a tal lìnea con las tabulaciones del archivo  
+    **git blame *file* -L30,50 -c**
+    * ver las rama remotas  
+    **git branch -r**
+    * ver ramas remotas y locales  
+    **git branch -a**
 
 
 1) Al invocar el comando, "git branch -a" devolverá una lista con los nombres de todas las ramas conocidas.
