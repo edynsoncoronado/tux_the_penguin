@@ -6,12 +6,12 @@ resource "aws_autoscaling_group" "web" {
   health_check_grace_period = 10
   health_check_type         = "ELB"
 
-  load_balancers            = [
+  load_balancers = [
     "${aws_elb.web.name}"
   ]
 
-  launch_configuration      = "${aws_launch_configuration.web.name}"
-  vpc_zone_identifier       = "${data.aws_subnet_ids.selected.ids}"
+  launch_configuration = "${aws_launch_configuration.web.name}"
+  vpc_zone_identifier  = "${data.aws_subnet_ids.selected.ids}"
 
   tag {
     key                 = "Name"

@@ -1,7 +1,7 @@
 resource "aws_elb" "web" {
-  name              = "${var.project_name}-elb-web"
-  subnets 			= 	"${data.aws_subnet_ids.selected.ids}"
-  security_groups 	= [ "${aws_security_group.allow_ssh_http_anywhere.id}" ]
+  name            = "${var.project_name}-elb-web"
+  subnets         = "${data.aws_subnet_ids.selected.ids}"
+  security_groups = ["${aws_security_group.allow_ssh_http_anywhere.id}"]
 
   listener {
     instance_port     = 80
