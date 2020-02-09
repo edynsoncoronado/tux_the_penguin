@@ -1,7 +1,7 @@
 resource "aws_security_group" "allow_ssh_http_anywhere" {
   name        = "${var.project_name}-allow_ssh_http_anywhere"
   description = "Allow TLS inbound traffic to ssh"
-  vpc_id      = "${var.vpc_id}"
+  vpc_id      = "${data.aws_vpc.selected.id}"
 
   ingress {
     # TLS (change to whatever ports you need)

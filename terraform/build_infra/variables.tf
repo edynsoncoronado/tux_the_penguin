@@ -5,6 +5,4 @@ variable "region" {
 variable "project_name" {
 	type="string"
 }
-variable "vpc_id" {}
-variable "ami_id" {}
 variable "instance_type" {}
