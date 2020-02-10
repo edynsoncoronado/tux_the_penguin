@@ -28,3 +28,7 @@ https://github.com/pablokbs/peladonerd
 https://medium.com/@prashant.vats/trigger-jenkins-job-remotely-using-python-22420792bac2 
 https://www.toptal.com/devops/terraform-jenkins-continuous-deployment
 https://medium.com/@devopsglobaleli/automating-terraform-deploys-with-jenkins-pipelines-ec0525382672
+
+## AWS Elastic
+### AWS Elastic IP Network vpc is not attached to any internet gateway
+https://stackoverflow.com/questions/28778970/aws-elastic-ip-network-vpc-is-not-attached-to-any-internet-gateway

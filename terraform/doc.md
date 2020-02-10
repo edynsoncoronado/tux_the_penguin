@@ -11,7 +11,7 @@ export PATH=$PATH:~/Documents/DevOps
 ```
 * source ~/.profile
 
-## Comands
+## Commands
 * terraform --version
 * terraform --help
 * terraform --help plan

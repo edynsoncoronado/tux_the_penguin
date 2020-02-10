@@ -5,3 +5,6 @@ $ nproc
 
 ### Monitorizar ram:
 $ free -h
+
+### Ps AUX
+ps aux | grep apache
