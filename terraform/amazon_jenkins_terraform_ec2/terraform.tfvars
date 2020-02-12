@@ -1,5 +1,5 @@
 project_name  = "Jenkins-Terraform"
-region = "us-east-2"
+region = "us-east-1"
 
 eip_private_ip = "10.0.0.5"
 
