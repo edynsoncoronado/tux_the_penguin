@@ -5,7 +5,7 @@ resource "aws_instance" "jenkins_instance" {
   vpc_security_group_ids = [ "${aws_security_group.sg_allow_ssh_jenkins.id}" ]
   subnet_id          = "${aws_subnet.public_subnet1.id}"
   associate_public_ip_address = true
-  #user_data = "${file("install_jenkins.sh")}"
+  user_data = "${file("install_jenkins.sh")}"
   tags = {
     Name = "${var.project_name}-instance"
   }
