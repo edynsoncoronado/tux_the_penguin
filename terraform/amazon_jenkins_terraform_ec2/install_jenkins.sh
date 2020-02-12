@@ -1,6 +1,10 @@
 #!/bin/bash
 
 sudo apt-get update && sudo apt-get upgrade -y
+sudo apt-get install -y git
+wget -qO- https://get.docker.com/ | sh
+sudo usermod -aG docker ubuntu
+
 sudo add-apt-repository ppa:webupd8team/java
 sudo apt-get install -y openjdk-8-jre
 wget -q -O - https://pkg.jenkins.io/debian/jenkins-ci.org.key | sudo apt-key add -
