@@ -1,6 +1,8 @@
 project_name  = "Jenkins-Terraform"
 region = "us-east-2"
 
+eip_private_ip = "10.0.0.5"
+
 vpc_cidr = "10.0.0.0/16"
 
 public_subnet_1_cidr  = "10.0.1.0/24"

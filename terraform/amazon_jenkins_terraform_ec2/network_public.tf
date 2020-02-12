@@ -22,3 +22,16 @@ resource "aws_subnet" "public_subnet3" {
     Name = "${var.project_name}-Public-Subnet-3"
   }
 }
+
+resource "aws_route_table_association" "public_route1_association" {
+  route_table_id = "${aws_route_table.public_route_table.id}"
+  subnet_id      = "${aws_subnet.public_subnet1.id}"
+}
+resource "aws_route_table_association" "public_route2_association" {
+  route_table_id = "${aws_route_table.public_route_table.id}"
+  subnet_id      = "${aws_subnet.public_subnet2.id}"
+}
+resource "aws_route_table_association" "public_route3_association" {
+  route_table_id = "${aws_route_table.public_route_table.id}"
+  subnet_id      = "${aws_subnet.public_subnet3.id}"
+}

@@ -1,8 +1,8 @@
 variable "region" {}
 
-variable "project_name" {
-	type="string"
-}
+variable "project_name" {}
+
+variable "eip_private_ip" {}
 
 variable "vpc_cidr" {
   description = "VPC cidr block"
