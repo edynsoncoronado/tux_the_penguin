@@ -2,6 +2,8 @@ variable "region" {}
 
 variable "project_name" {}
 
+variable "instance_type" {}
+
 variable "eip_private_ip" {}
 
 variable "vpc_cidr" {
