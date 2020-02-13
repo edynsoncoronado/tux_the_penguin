@@ -2,7 +2,7 @@ project_name  = "Jenkins-Terraform"
 region = "us-east-1"
 instance_type = "t2.medium"
 
-eip_private_ip = "10.0.0.5"
+eip_private_ip = "10.0.1.5"
 
 vpc_cidr = "10.0.0.0/16"
 
