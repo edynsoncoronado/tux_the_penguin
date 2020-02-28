@@ -24,14 +24,14 @@ lsblk
 ```
 
 ## AMPLIACIÓN DEL SISTEMA DE ARCHIVOS
-###FORMAT ext2, ext3 o ext4
+### FORMAT ext2, ext3 o ext4
 ```bash
 df -h
 sudo resize2fs /dev/xvda1
 df -h
 ```
 
-###FORMAT XFS
+### FORMAT XFS
 ```bash
 df -h
 sudo yum install xfsprogs
