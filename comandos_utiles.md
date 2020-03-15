@@ -8,3 +8,6 @@ $ free -h
 
 ### Ps AUX
 ps aux | grep apache
+
+### Liberar memoria swap
+swapoff -a && swapon -a
