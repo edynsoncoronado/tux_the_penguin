@@ -14,3 +14,6 @@ swapoff -a && swapon -a
 
 ### Create default home directory for existing user in terminal
 mkhomedir_helper username
+
+### ssh keygen
+ssh-keygen -t rsa -b 4096
