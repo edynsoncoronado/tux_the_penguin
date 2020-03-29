@@ -51,6 +51,3 @@ systemctl start jenkins
 	- Manage Jenkins > Global Tool Configuration > JDK  
 		- NAME: JAVA_HOME
 		- JAVA_HOME: /usr/lib/jvm/java-8-openjdk-amd64
-
-
-
