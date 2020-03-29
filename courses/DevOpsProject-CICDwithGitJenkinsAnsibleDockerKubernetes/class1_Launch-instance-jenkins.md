@@ -41,11 +41,11 @@ systemctl start jenkins
 2) No install pluging
 3) The Username default is admin
 4) Change admin password
-	admin > Configure > Password
+	- admin > Configure > Password
 5) Configure java path
-	Manage Jenkins > Global Tool Configuration > JDK  
-	- NAME: JAVA_HOME
-	- JAVA_HOME: /usr/lib/jvm/java-8-openjdk-amd64
+	- Manage Jenkins > Global Tool Configuration > JDK  
+		- NAME: JAVA_HOME
+		- JAVA_HOME: /usr/lib/jvm/java-8-openjdk-amd64
 
 
 
