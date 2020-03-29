@@ -22,7 +22,12 @@ source ~/.bashrc
 echo $JAVA_HOME
 >>> /usr/lib/jvm/java-8-openjdk-amd64
 ```
-* (What is the difference between JDK and JRE?)[https://stackoverflow.com/a/1906455]
+* [What is the difference between JDK and JRE?](https://stackoverflow.com/a/1906455)
+* Install multiple version
+```
+apt install openjdk-11-jre
+update-alternatives --config java
+```
 
 ## Install Jenkins
 ```
@@ -34,7 +39,7 @@ systemctl start jenkins
 # service jenkins start
 # IP:8080
 ```
-* (How can I append text to /etc/apt/sources.list from the command line?)[https://stackoverflow.com/a/850731]
+* [How can I append text to /etc/apt/sources.list from the command line?](https://stackoverflow.com/a/850731)
 
 ## Configure Jenkins
 1) Password Location:/var/lib/jenkins/secrets/initialAdminPassword
