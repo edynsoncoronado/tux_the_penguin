@@ -43,12 +43,12 @@ mvn --version
 	- MAVEN_HOME: /opt/maven
 
 ## Maven Job
-- New Item > Maven project
+1) New Item > Maven project
 	- Name: Firs_maven_project
-- Source Code Management > Git
+2) Source Code Management > Git
 	- Repository URL: https://github.com/edynsoncoronado/hello-world.git
-	- Branches to build: */master
-- Build
+	- Branches to build: \*/master
+3) Build
 	- Root POM: pom.xml
 
 * **Project workspace:** /var/lib/jenkins/workspace/Firs_maven_project
