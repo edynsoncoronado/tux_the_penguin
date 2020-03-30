@@ -10,7 +10,7 @@
 3) Build
 	- Root POM: pom.xml
 4) Post-build Actions > Deploy war/ear to a container
-	- WAR/EAR files: \**/*.war
+	- WAR/EAR files: **/*.war
 	- Containers: Tomcat 8.x Remote
 	- add Credentials:
 		- Username: deployer
