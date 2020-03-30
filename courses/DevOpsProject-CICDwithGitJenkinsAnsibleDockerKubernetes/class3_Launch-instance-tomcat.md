@@ -3,7 +3,7 @@
 - Instance Type: t2.micro
 - SG ports: 22;8080
 
-## [Install Java](../class1_Launch-instance-jenkins.md)
+## [Install Java](class1_Launch-instance-jenkins.md)
 
 ## Install Tomcat
 ```
