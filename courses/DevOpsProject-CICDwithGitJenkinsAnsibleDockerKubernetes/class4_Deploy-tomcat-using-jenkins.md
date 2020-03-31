@@ -29,3 +29,10 @@ ROOT  docs  examples  host-manager  manager
 # after build
 ROOT  docs  examples  host-manager  manager  webapp  webapp.war
 ```
+
+## Deploy through PollSCM
+1) Job: Deploy_tomcat_on_container > Build Triggers > check Poll SCM (minute / hours / day / month / week)
+	- Schedule: * * * * *
+2) Clone repo and edit: https://github.com/edynsoncoronado/hello-world.git
+3) Push run automatic job.
+* IPtomcat-server:8080/webapp/
