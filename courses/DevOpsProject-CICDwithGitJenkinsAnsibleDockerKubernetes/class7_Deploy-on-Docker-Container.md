@@ -36,4 +36,4 @@ docker rmi devops-project:latest
 ## Error!
 	- First Build -> SUCCESS
 	- Second Build -> UNSTABLE
-	To solve this error we have to use Ansible, installation and configuration in the next class.
+	* To solve this error we have to use Ansible, installation and configuration in the next class.
