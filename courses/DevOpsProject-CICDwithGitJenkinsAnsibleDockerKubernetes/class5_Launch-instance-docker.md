@@ -26,7 +26,6 @@ cp -R webapps.dist/* webapps
 ```
 *IPserverdocker:8080
 
-
 ## Tomcat:8.0 Docker Image
 ```
 docker pull tomcat:8.0
