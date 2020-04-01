@@ -11,8 +11,8 @@ id dockeradmin
 ```
 
 ## DockerServer: ssh config
-vim /etc/ssh/sshd_config
 ```
+vim /etc/ssh/sshd_config
 """
 ~~~
 PasswordAuthentication yes
