@@ -13,10 +13,12 @@ id dockeradmin
 ## DockerServer: ssh config
 vim /etc/ssh/sshd_config
 ```
+"""
 ~~~
 PasswordAuthentication yes
-```
+"""
 service ssh reload
+```
 
 ## JenkinsServer: Install Plugin
 - Manage Jenkins > Manage Plugins > Available > Publish Over SSH (https://plugins.jenkins.io/publish-over-ssh/)
