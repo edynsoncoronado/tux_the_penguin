@@ -24,4 +24,10 @@ sudo chown -R ansadmin:ansadmin /opt/docker
 		- Remove prefix: webapp/target
 		- Remote directory: //opt//docker
 		- Exec command:
-3) Save and Build Now
+3) Save and Build Now:
+```
+# AnsibleServer
+cd /opt/docker
+ls
+>>> webapp.war
+```
