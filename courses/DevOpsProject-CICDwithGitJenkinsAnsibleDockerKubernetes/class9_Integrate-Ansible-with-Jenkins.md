@@ -1,9 +1,9 @@
 ## JenskinsServer: Configure SSH
-Manage Jenkins > Configure System > Publish over SSH > SSH Servers > add
+1) Manage Jenkins > Configure System > Publish over SSH > SSH Servers > add
 	- Name: ansible-server
 	- Hostname: IPprivateansible
 	- Username: ansadmin
-Advanced:
+2) Advanced:
 	- check Use password authentication, or use a different key
 	- Passphrase / Password: *****
 
