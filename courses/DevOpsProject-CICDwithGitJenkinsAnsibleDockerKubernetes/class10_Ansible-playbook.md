@@ -8,17 +8,8 @@ FROM tomcat:8.0
 
 COPY ./webapp.war /usr/local/tomcat/webapps
 """
-vim simple-devops-image.yml
-"""
-- hosts: all
-  become: true
-  tasks:
-  - name: building docker image
-    command: docker build -t simple-devops-image .
-    args:
-      chdir: /opt/docker
-"""
 ```
+
 ## AnsibleServer: Create Playbook
 ```
 pwd
