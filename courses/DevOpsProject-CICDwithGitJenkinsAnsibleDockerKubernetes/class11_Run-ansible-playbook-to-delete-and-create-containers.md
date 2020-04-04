@@ -39,7 +39,7 @@ vim simple-devops-project.yml
 	- ansible-playbook -i /opt/docker/hosts /opt/docker/simple-devops-project.yml;
 
 2) Build Triggers > check Poll SCM:
-	- * * * * *
+	- \* * * * *
 
 ## JenkinsServer: Build Now or Modify repo hello-world
 ```
