@@ -1,6 +1,6 @@
 ## AnsibleServer: Docker rm
 ```
-docker rm -f simple-devops-conatiner
+docker rm -f simple-devops-container
 docker rmi simple-devops-image:latest tomcat:8.0
 ```
 

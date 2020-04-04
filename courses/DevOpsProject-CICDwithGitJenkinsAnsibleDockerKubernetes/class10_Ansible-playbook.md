@@ -55,5 +55,5 @@ tomcat                8.0                 ef6a7c98d192        18 months ago     
 
 docker ps
 CONTAINER ID        IMAGE                 COMMAND             CREATED              STATUS              PORTS                    NAMES
-ab3beaa0dedc        simple-devops-image   "catalina.sh run"   About a minute ago   Up About a minute   0.0.0.0:8080->8080/tcp   simple-devops-conatiner
+ab3beaa0dedc        simple-devops-image   "catalina.sh run"   About a minute ago   Up About a minute   0.0.0.0:8080->8080/tcp   simple-devops-container
 ```
