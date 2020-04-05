@@ -6,6 +6,8 @@ docker rmi simple-devops-image:latest tomcat:8.0
 
 ## AnsibleServer: Edit playbook
 ```
+su - ansadmin
+cd /op/docker
 vim simple-devops-project.yml
 """
 ---
