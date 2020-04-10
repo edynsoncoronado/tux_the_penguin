@@ -1,8 +1,8 @@
 ## What is:
-(https://raw.githubusercontent.com/edynsoncoronado/tux_the_penguin/master/src/images/whatis.png)
+![What is?](https://raw.githubusercontent.com/edynsoncoronado/tux_the_penguin/master/src/images/whatis.png)
 
 ## DevOps Flow:
-(https://raw.githubusercontent.com/edynsoncoronado/tux_the_penguin/master/src/images/devopsflow.png)
+![DevOps Flow](https://raw.githubusercontent.com/edynsoncoronado/tux_the_penguin/master/src/images/devopsflow.png)
 
 ## Overview:
 - Setting up Kubernetes environment
