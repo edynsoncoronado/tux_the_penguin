@@ -62,4 +62,4 @@ kubernetes    ClusterIP      100.64.0.1     <none>                              
 <<<
 ```
 - Open Browser:
-	Public DNS (IPv4):30782
+	Public DNS (IPv4):31200
