@@ -41,3 +41,21 @@ docker ps -a
 docker images
 ```
 * IPserverdocker:8080/webapp
+
+## JenkinsServer: Copy Job
+1) New Item:
+	- name: Deploy_on_Docker_Container_using_Ansible_playbooks
+	- copy from: Deploy_on_Container_using_ansible
+2) Post-build Actions > SSH Publishers > Transfers > Exec command:
+	- ```
+	ansible-playbook -i /opt/docker/hosts /opt/docker/create-simple-devops-project.yml --limit localhost;
+	ansible-playbook -i /opt/docker/hosts /opt/docker/create-simple-devops-project.yml --limit IPprivatedockerserver
+	```
+3) Modify repo [helloworld](https://github.com/edynsoncoronado/hello-world)
+```
+vim hello-world/webapp/src/main/webapp/index.jsp
+git commit
+git add
+git push
+```
+* IPserverdocker:8080

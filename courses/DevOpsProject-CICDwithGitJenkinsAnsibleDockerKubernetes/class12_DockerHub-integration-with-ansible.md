@@ -69,7 +69,7 @@ vim create-simple-devops-project.yml
     ignore_errors: yes
 
   - name: remove stopped container
-    command: docker rm simple-devops-container:latest
+    command: docker rm simple-devops-container
     ignore_errors: yes
 
   - name: remove docker image
