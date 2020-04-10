@@ -91,4 +91,6 @@ ip-172-20-60-77.ec2.internal   Ready    node     5m17s   v1.16.7
 ```
 
 ## To delete cluster
+```
 kops delete cluster demo.k8s.edynsoncoronado.com --yes
+```
