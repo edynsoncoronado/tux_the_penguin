@@ -47,10 +47,10 @@ docker images
 	- name: Deploy_on_Docker_Container_using_Ansible_playbooks
 	- copy from: Deploy_on_Container_using_ansible
 2) Post-build Actions > SSH Publishers > Transfers > Exec command:
-	- ```
-	ansible-playbook -i /opt/docker/hosts /opt/docker/create-simple-devops-project.yml --limit localhost;
-	ansible-playbook -i /opt/docker/hosts /opt/docker/create-simple-devops-project.yml --limit IPprivatedockerserver
-	```
+```
+ansible-playbook -i /opt/docker/hosts /opt/docker/create-simple-devops-project.yml --limit localhost;
+ansible-playbook -i /opt/docker/hosts /opt/docker/create-simple-devops-project.yml --limit IPprivatedockerserver
+```
 3) Modify repo [helloworld](https://github.com/edynsoncoronado/hello-world)
 ```
 vim hello-world/webapp/src/main/webapp/index.jsp
