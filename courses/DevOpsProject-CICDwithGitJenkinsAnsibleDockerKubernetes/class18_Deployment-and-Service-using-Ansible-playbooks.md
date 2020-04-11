@@ -31,7 +31,7 @@ IPkubernetesServer
 ### AnsibleServer: Create ansible playbooks to create deployment and services
 ```
 cd /opt/kubernetes
-vim kubernetes-edy-deployment.yml
+sudo vim kubernetes-edy-deployment.yml
 """
 ---
 - name: Create pods using deployment 
@@ -43,7 +43,7 @@ vim kubernetes-edy-deployment.yml
   - name: create a deployment
     command: kubectl apply -f edy-deploy.yml
 """
-vim kubernetes-edy-service.yml
+sudo vim kubernetes-edy-service.yml
 """
 ---
 - name: create service for deployment
@@ -56,3 +56,19 @@ vim kubernetes-edy-service.yml
     command: kubectl apply -f edy-service.yml
 """
 ```
+
+## K8sServer: Delete Deployment and Service
+```
+kubectl delete deployment edy-deployment
+kubectl delete service edy-service
+```
+
+## AnsibleServer: Running ansilbe playbooks
+```
+su - ansadmin 
+cd /opt/kubernetes
+ansible-playbook -i hosts kubernetes-edy-deployment.yml
+ansible-playbook -i hosts kubernetes-edy-service.yml
+```
+- Open Browser:  
+	K8sServer:Public DNS (IPv4):31200

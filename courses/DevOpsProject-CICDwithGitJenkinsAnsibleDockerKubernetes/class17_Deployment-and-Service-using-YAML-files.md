@@ -61,5 +61,5 @@ edy-service   LoadBalancer   100.67.18.37   afd6bb3f7d27e4f98b5f520809ce6d9b-169
 kubernetes    ClusterIP      100.64.0.1     <none>                                                                    443/TCP          6h
 <<<
 ```
-- Open Browser:
+- Open Browser:  
 	Public DNS (IPv4):31200
