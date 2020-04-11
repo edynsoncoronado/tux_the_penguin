@@ -9,7 +9,7 @@ kubectl delete service edy-service
 	- name: deploy_on_kubernetes_CD
 	- Freestyle project
 - Post-build Actions > Send build artifacts over SSH > SSH Publishers
-	- Name: [ansible-server](class9_Integrate-Ansible-with-jenkins.md)
+	- Name: [ansible-server](class9_Integrate-Ansible-with-Jenkins.md)
 	- Exec command: 
 ```
 ansible-playbook -i /opt/kubernetes/hosts /opt/kubernetes/kubernetes-edy-deployment.yml;
