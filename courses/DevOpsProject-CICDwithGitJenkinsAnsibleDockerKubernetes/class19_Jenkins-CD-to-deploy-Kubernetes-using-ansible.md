@@ -1,4 +1,4 @@
-## K8sServer: Delete Deployment and Service
+## K8sClusterMaster: Delete Deployment and Service
 ```
 kubectl delete deployment edy-deployment
 kubectl delete service edy-service

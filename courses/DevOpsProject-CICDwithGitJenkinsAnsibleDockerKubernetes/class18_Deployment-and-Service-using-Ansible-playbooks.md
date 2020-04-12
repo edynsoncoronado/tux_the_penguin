@@ -57,7 +57,7 @@ sudo vim kubernetes-edy-service.yml
 """
 ```
 
-## K8sServer: Delete Deployment and Service
+## K8sClusterMaster: Delete Deployment and Service
 ```
 kubectl delete deployment edy-deployment
 kubectl delete service edy-service
@@ -71,4 +71,4 @@ ansible-playbook -i hosts kubernetes-edy-deployment.yml
 ansible-playbook -i hosts kubernetes-edy-service.yml
 ```
 - Open Browser:  
-	K8sServer:Public DNS (IPv4):31200
+	K8sClusterMaster:Public DNS (IPv4):31200
