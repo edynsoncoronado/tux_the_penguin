@@ -20,23 +20,23 @@
 
 ## Arquitectura de Kubernetes
 ### Master
-**a) kube-apiserver**  
-	- Expone la api de kubernetes.  
-	- Es la interfaz que sirve como medio de comunicación entre los agentes, CLI o el dashboardy el nodo master.  
-	- Se usa el algoritmo de raft para algoritmo deelección. https://raft.github.io/   
-**b) kube-scheduler**  
-	- Se encarga de revisar las restricciones y recursos disponibles al crear un job, un pod en máquinas específicas.  
-**c) kube-controller-manager**  
-	- Es un proceso que estàn en un ciclo de reconciliación constante buscando llegar al estado deseado con base al modelo declarativo con el que se le dan instrucciones a K8s.  
-	- Tipos:  
-		- Replica manager  
-		- Deployment manager  
-		- Service manager  
-**d) cloud-controller-manager**  
-	- Permite que el código de proveedores en la nube y el código de kubernetes evolucionen de forma independiente entre sí.  
-**e) etcd**  
-	- Key value store que permite que el cluster estealtamente disponible.  
-	- Utilizado como almacén de respaldo de kubernetes para todos los datos del clúster.  
+a) kube-apiserver
+	- Expone la api de kubernetes.
+	- Es la interfaz que sirve como medio de comunicación entre los agentes, CLI o el dashboardy el nodo master.
+	- Se usa el algoritmo de raft para algoritmo deelección. https://raft.github.io/
+b) kube-scheduler
+	- Se encarga de revisar las restricciones y recursos disponibles al crear un job, un pod en máquinas específicas.
+c) kube-controller-manager
+	- Es un proceso que estàn en un ciclo de reconciliación constante buscando llegar al estado deseado con base al modelo declarativo con el que se le dan instrucciones a K8s.
+	- Tipos:
+		- Replica manager
+		- Deployment manager
+		- Service manager
+d) cloud-controller-manager
+	- Permite que el código de proveedores en la nube y el código de kubernetes evolucionen de forma independiente entre sí.
+e) etcd
+	- Key value store que permite que el cluster estealtamente disponible.
+	- Utilizado como almacén de respaldo de kubernetes para todos los datos del clúster.
 ![CAT](https://raw.githubusercontent.com/edynsoncoronado/tux_the_penguin/master/src/images/arquitecturak81.png)
 
 ### Nodo
