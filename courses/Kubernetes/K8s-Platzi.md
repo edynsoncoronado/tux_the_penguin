@@ -18,7 +18,9 @@
 		- Permite que nuestro proceso tenga acceso a los recursos del sistema.
 		- Cambia el root directory de un proceso.
 
-
+## Arquitectura de Kubernetes
+![CAT](https://raw.githubusercontent.com/edynsoncoronado/tux_the_penguin/master/src/images/arquitecturak81.png)
+![CAT](https://raw.githubusercontent.com/edynsoncoronado/tux_the_penguin/master/src/images/arquitecturak82.png)
 
 
 
