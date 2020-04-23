@@ -1,29 +1,30 @@
 ## ¿Qué es kubernetes? 
 - Una herramienta open source de orquestación de contenedores.
 - K8s es la plataforma más extensiva para orquestación de servicios e infraestructura.
-- *Kubernetes es un concepto abstracto que combina principalmente 3 tecnologías:*
-	- **Cgroups - control groups**
-		- Aísla los recursos de memoria, IO, CPU.
-		- Limita los recursos a usar del sistema operativo.
-	- **Namespaces**
-		- Hace que nuestra aplicación corra en un sandbox.
-		- **Mount namespaces**
-			- Hace que nuestra aplicación tenga una visibilidad reducida de las carpetas donde trabaja.
-		- **Networking Namespaces**
-			- Es la entidad sobre la cual se corre los contenedores.
-			- Hace que cada contenedor tenga su interfaz de red, dirección de ip, dirección de rutas.
-		- **PID**
-			- Es el proceso ejecutado en nuestro contenedor.
-	- **Chroot**
-		- Permite que nuestro proceso tenga acceso a los recursos del sistema.
-		- Cambia el root directory de un proceso.
+
+Kubernetes es un concepto abstracto que combina principalmente 3 tecnologías:
+- **Cgroups - control groups**
+	- Aísla los recursos de memoria, IO, CPU.
+	- Limita los recursos a usar del sistema operativo.
+- **Namespaces**
+	- Hace que nuestra aplicación corra en un sandbox.
+	- **Mount namespaces**
+		- Hace que nuestra aplicación tenga una visibilidad reducida de las carpetas donde trabaja.
+	- **Networking Namespaces**
+		- Es la entidad sobre la cual se corre los contenedores.
+		- Hace que cada contenedor tenga su interfaz de red, dirección de ip, dirección de rutas.
+	- **PID**
+		- Es el proceso ejecutado en nuestro contenedor.
+- **Chroot**
+	- Permite que nuestro proceso tenga acceso a los recursos del sistema.
+	- Cambia el root directory de un proceso.
 
 ## Arquitectura de Kubernetes
 ### Master
 - **kube-apiserver**
 	- Expone la api de kubernetes.
-	- Es la interfaz que sirve como medio de comunicación entre los agentes, CLI o el dashboardy el nodo master.
-	- Se usa el algoritmo de raft para algoritmo deelección. https://raft.github.io/
+	- Es la interfaz que sirve como medio de comunicación entre los agentes, CLI o el dashboard y el nodo master.
+	- Se usa el algoritmo de **raft para algoritmo de elección**: https://raft.github.io/
 - **kube-scheduler**
 	- Se encarga de revisar las restricciones y recursos disponibles al crear un job, un pod en máquinas específicas.
 - **kube-controller-manager**
@@ -35,7 +36,7 @@
 - **cloud-controller-manager**
 	- Permite que el código de proveedores en la nube y el código de kubernetes evolucionen de forma independiente entre sí.
 - **etcd**
-	- Key value store que permite que el cluster estealtamente disponible.
+	- Key value store permite que el cluster esté altamente disponible.
 	- Utilizado como almacén de respaldo de kubernetes para todos los datos del clúster.
 ![CAT](https://raw.githubusercontent.com/edynsoncoronado/tux_the_penguin/master/src/images/arquitecturak81.png)
 
@@ -66,7 +67,7 @@ Pueden ser usados de dos maneras:
 - **Pods que ejecutan un contenedor:**
 	- En este caso un pod es representado como una envoltura de un contenedor (Pod as a wrapper around a single container).
 - **Pods que ejecutan múltiples contenedores que necesitan trabajar juntos:**
-	- El Pod encampsula una aplicación compuesta de múltiples contenedores acoplados que necesitan compartir recursos.
+	- El Pod encapsula una aplicación compuesta de múltiples contenedores acoplados que necesitan compartir recursos.
 
 ```
 $ kubectl get pods -o wide
@@ -337,48 +338,48 @@ rng-6979b4858b-4clx2   1/1     Running   0          38s    100.96.2.19   ip-172-
 rng-lkldv              1/1     Running   0          10m    100.96.1.18    ip-172-20-48-177.ec2.internal   <none>           <none>
 rng-pnh44              1/1     Running   0          17m    100.96.2.18   ip-172-20-57-230.ec2.internal   <none>           <none>
 ```
-- La comunicaición entre los pods lo realiza identificándolos por el label, al eliminar el label de un pod, k8s no puede identificarlo por lo que procede a eliminarlo y crear un nuevo pod.
+- La comunicación entre los pods lo realiza identificándolos por el label, al eliminar el label de un pod, k8s no puede identificarlo por lo que procede a eliminarlo y crear un nuevo pod.
 - K8s al ser un sistema declarativo, escalará el servicio rng para que vuelva a su estado anterior.
 
 
 ## HELM
 - Utilitario que nos ayuda hacer depliegues de forma sencilla.
 ```
-// Instalar helm
+# Instalar helm
 $ curl https://raw.githubusercontent.com/kubernetes/helm/master/scripts/get | bash
 
-// Verificar si tenemos helm instalado
+# Verificar si tenemos helm instalado
 $ helm
 
-// Configurar helm
+# Configurar helm
 $ helm init
 
-// Verificar si Tiller está instalado
-// Tiller se instala en el namespace administrativo: kube-system
+# Verificar si Tiller está instalado
+# Tiller se instala en el namespace administrativo: kube-system
 $ kubectl get pods -n kube-system
 
-// Dar permisos para ejecutar helm en nuestro cluster default
+# Dar permisos para ejecutar helm en nuestro cluster default
 $ kubectl create clusterrolebinding add-on-cluster-admin --clusterrole=cluster-admin --serviceaccount=kube-system:default
 
-// Buscar paquetes
+# Buscar paquetes
 $ helm search
 
-// Ejemplo de cómo instalar un paquete
+# Ejemplo de cómo instalar un paquete
 $ helm search prometheus
 $ helm inspect stable/prometheus | less
 $ helm install stable/prometheus --set server.service.type=NodePort --set server.persistentVolume.enabled=false
 
-// Obtener servicios y verificar en què puerto está corriendo nuestra aplicación de prometheus
+# Obtener servicios y verificar en què puerto está corriendo nuestra aplicación de prometheus
 $ kubectl get svc
 
-// Crear helm chart
+# Crear helm chart
 $ helm create dockercoins
 $ cd dockercoins
 $ mv templates/ templates-old
 $ mkdir templates
 $ cd ..
 
-// Exportar los recursos de nuestra aplicación
+# Exportar los recursos de nuestra aplicación
 $ kubectl get -o yaml --export deployment worker
 """
 while read kind name; do
@@ -417,7 +418,7 @@ $ kubectl create namespace blue
 $ kubectl -n blue get svc
 $ kubectl config get-contexts
 ```
-- Comunición a la api de kubernetes desde un pod
+- Comunicación a la api de kubernetes desde un pod
 ```
 $ kubectl run --image alpine -ti bash
 ~ apk add --no-cache curl
