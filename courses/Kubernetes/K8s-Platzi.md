@@ -60,9 +60,11 @@ Kubernetes es un concepto abstracto que combina principalmente 3 tecnologías:
 ![CAT](https://raw.githubusercontent.com/edynsoncoronado/tux_the_penguin/master/src/images/arquitecturak82.png)
 
 ## ¿Qué es un pod?
+- https://kubernetes.io/docs/concepts/workloads/pods/pod-overview/
 - Es la unidad básica de ejecución de una aplicación en K8s.
 - Representa al proceso en ejecución en el cluster.
-- Encapsula un contenedor de aplicaciones o en algunos casos, múltiples contenedores.  
+- Encapsula un contenedor de aplicaciones o en algunos casos, múltiples contenedores.
+
 Pueden ser usados de dos maneras:
 - **Pods que ejecutan un contenedor:**
 	- En este caso un pod es representado como una envoltura de un contenedor (Pod as a wrapper around a single container).
@@ -140,11 +142,11 @@ $ kubectl expose deploy/webui --type=NodePort --port 80
 ```
 # Evaluar comando en contenedor
 $ kubectl exec redis-65fd448c9b-8r8hz -ti bash
-$ redis-cli asde
-$ echo $?
+~ redis-cli asde
+~ echo $?
 >> 0
-$ nofound
-$ echo $?
+~ nofound
+~ echo $?
 >> 127
 
 # Healthcheck liveness custome-exec
@@ -159,8 +161,10 @@ spec:
 +++			exec:
 +++				command: ["nofound"]
 """
-$ kubectl get pod -w		>> kubernetes crea un nuevo pod
-$ kubectl describe pod redis-59d6bfc7fc-9vqql >> ver estado del check
+# ver nuevo pod creado
+$ kubectl get pod -w
+# ver estado del pod creado
+$ kubectl describe pod redis-59d6bfc7fc-9vqql
 """
     Restart Count:  1
     ...
@@ -170,7 +174,8 @@ $ kubectl describe pod redis-59d6bfc7fc-9vqql >> ver estado del check
 
 ## Despliegues Controlados
 - RollingUpdate es el método que utiliza k8s para actualizar la versión de la aplicación.
-- Visualizar método RollingUpdate de los deploys
+
+Visualizar método RollingUpdate de los deploys
 ```
 $ kubectl get deploy -o json | jq ".items[] | {name:.metadata.name} + .spec.strategy.rollingUpdate"
 {
@@ -225,7 +230,6 @@ worker-598788db65   1         1         1       58m
 
 $ kubectl scale deploy/worker --replicas 5
 $ kubectl get replicasets -w
-admin@ip-172-20-59-31:~$ kubectl get replicasets -w
 NAME                DESIRED   CURRENT   READY   AGE
 hasher-99d4fdc78    1         1         1       58m
 redis-59d6bfc7fc    1         1         1       32m
@@ -279,7 +283,7 @@ worker   4/5     3            4           78m
 
 # Revertir deploy
 $ kubectl rollout undo deploy worker
-admin@ip-172-20-59-31:~$ kubectl get replicasets
+$ kubectl get replicasets
 NAME                DESIRED   CURRENT   READY   AGE
 hasher-99d4fdc78    1         1         1       84m
 redis-59d6bfc7fc    1         1         1       57m
