@@ -20,6 +20,10 @@ psql -U postgres -c "alter role postgres with password 'admin';"
 sudo su postgres
 sed -i s/"local    all             postgres                                trust"/"local   all             postgres                                md5 "/g /etc/postgresql/10/main/pg_hba.conf
 sed -i s/"local   all             all                                     peer"/"local   all             odoo                                    md5"/g /etc/postgresql/10/main/pg_hba.conf
+sudo vim /etc/postgresql/10/main/pg_hba.conf
+"""
+host    all             odoo            0.0.0.0/0               md5
+"""
 sudo /etc/init.d/postgresql restart
 ```
 
