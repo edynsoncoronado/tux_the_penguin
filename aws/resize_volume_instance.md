@@ -27,7 +27,10 @@ lsblk
 ### FORMAT ext2, ext3 o ext4
 ```bash
 df -h
+# opción1
 sudo resize2fs /dev/xvda1
+# opción2
+sudo resize2fs /dev/nvme0n1p1
 df -h
 ```
 
