@@ -42,3 +42,5 @@ sudo xfs_growfs -d /
 sudo xfs_growfs -d /data
 df -h
 ```
+
+Fuente: https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/recognize-expanded-volume-linux.html
