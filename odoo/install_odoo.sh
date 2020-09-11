@@ -148,3 +148,8 @@ $ add-apt-repository ppa:certbot/certbot
 $ apt update
 $ apt install python-certbot-nginx -y
 $ certbot --nginx -d edynsoncoronado.com -d www.edynsoncoronado.com
+
+# Renew Certificate
+$ certbot --nginx certonly -d edynsoncoronado.com
+$ /opt/certbot/letsencrypt-auto certonly --standalone --renew-by-default -d edynsoncorondo.com
+
