@@ -27,7 +27,10 @@ lsblk
 ### FORMAT ext2, ext3 o ext4
 ```bash
 df -h
+# opción1
 sudo resize2fs /dev/xvda1
+# opción2
+sudo resize2fs /dev/nvme0n1p1
 df -h
 ```
 
@@ -39,3 +42,5 @@ sudo xfs_growfs -d /
 sudo xfs_growfs -d /data
 df -h
 ```
+
+Fuente: https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/recognize-expanded-volume-linux.html
